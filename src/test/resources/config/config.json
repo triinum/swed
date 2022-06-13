@@ -1,0 +1,14 @@
+{
+  "url": "https://www.swedbank.ee/private/credit/loans/newSmall?language=EST",
+  "screenshotonpass": "no",
+  "screenshotonfail": "yes",
+  "screenshotonskip": "no",
+  "overridereports": "no",
+  "retryfailedtest": "no",
+  "runmode": "remote",
+  "browser": "chrome",
+  "huburl": "http://localhost:4444/wd/hub",
+  "writetoekl": "yes",
+  "screenrecording": "no",
+  "log4jloggingrequired": "yes"
+}

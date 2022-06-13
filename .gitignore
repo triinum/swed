@@ -1,0 +1,9 @@
+# Ignore Mac system files
+.DS_store
+
+test-output/
+
+# Ignore .idea
+.idea/
+
+target/
