@@ -1,23 +1,28 @@
-package regression;
+package fillout_loanform;
 
 import annotations.CustomFrameworkAnnotations;
 import base.BaseTest;
 import com.github.javafaker.Faker;
 import enums.TestCaseType;
 import org.assertj.core.api.Assertions;
-import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import org.testng.annotations.*;
-import pages.SwedbankHomePage;
-import pages.Small_loanPage;
+import pages.SwedBankMain;
+import pages.SwedbankSmall_loan;
 import utils.StringDecodeImpl;
 
+public class SwedbankSmall_loanTest extends BaseTest {
 
-public final class Small_loanPageTest extends BaseTest {
 
+    // driver.manage().window().maximize();
 
-    public void userIsAbleToNavigateToSmallLoanPage() throws Throwable{
-        final SwedbankHomePage swedbankHomePage = new SwedbankHomePage();
-        swedbankHomePage.iOpensmallLoanPage();
+  
+    @CustomFrameworkAnnotations(testCaseType = TestCaseType.FUNCTIONAL, testCaseModule = "Login")
+  //  @Test(testName = "Validate login with invalid credentials", dataProvider = "getUsernameAndPassword", groups = {"regression"})
+    @Test(testName = "Navigate to small loan application form", groups = {"fillout_loanform"})
+    public void mainPagetoloanPage() {
+        SwedBankMain swedBankMain = new SwedBankMain();
+        swedBankMain.clickAcceptCookies();
+        swedBankMain.headingText();
+        swedBankMain.filloutInitialForm();
     }
 }
