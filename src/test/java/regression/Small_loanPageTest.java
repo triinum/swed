@@ -7,7 +7,7 @@ import enums.TestCaseType;
 import org.assertj.core.api.Assertions;
 import org.testng.annotations.Test;
 import pages.SwedBankMain;
-import pages.SwedbankSmall_loan;
+import pages.Small_loanPage;
 import utils.StringDecodeImpl;
 
 public class SwedbankSmall_loanTest extends BaseTest {
