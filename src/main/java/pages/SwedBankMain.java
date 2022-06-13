@@ -25,7 +25,7 @@ public  class SwedBankMain extends BasePage {
     WebElement nextButtom = driver.findElement(By.xpath("//*[@id='B_next']"));
     WebElement logo = driver.findElement(By.xpath("//*[@a='logo']"));
     WebElement articleHeading = driver.findElement(By.xpath("//div[@class='mainform']//h2"));
-    String expectedheading_article = "APPLICATION TEST DRIVE";
+    String expectedheading_article = "tekst";
     
 //WebElement email = driver.findElement(By.xpath("//*[@id='exampleInputEmail1']"));
     /* private final By logout = By.xpath("//button[text()='Täidan taotluse']");
