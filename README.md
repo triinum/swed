@@ -3,7 +3,7 @@
 1. `mvn clean package -DskipTests`
 2. `docker build -t swedbank-uiautomation:latest .`
 3. `docker-compose up`
-4. `mvn clean package test -DsuiteXmlFile=xml-suites/regression.xml  -DBROWSER=${Chrome}`
+4. `mvn clean package test -DsuiteXmlFile=xml-suites/regression.xml  -DBROWSER=Chrome`
 
 
 # Testlood 
