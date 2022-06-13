@@ -1,14 +1,14 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
 
-<suite name="regression" thread-count="3" verbose="1" parallel="methods">
-    <test name="regression">
+<suite name="fillout_loanform" thread-count="3" verbose="1" parallel="methods">
+    <test name="fillout_loanform">
         <groups>
             <run>
-                <include name="regression"/>
+                <include name="fillout_loanform"/>
             </run>
         </groups>
         <classes>
-            <class name="regression.Small_loanPageTest"/>
+            <class name="fillout_loanform.SwedbankSmall_loanTest"/>
         </classes>
     </test>
 </suite>
