@@ -10,7 +10,10 @@ import pages.SwedBankMain;
 import pages.Small_loanPage;
 import utils.StringDecodeImpl;
 
-public class SwedbankSmall_loanTest extends BaseTest {
+public final class SwedbankSmall_loanTest extends BaseTest {
+
+private SwedbankSmall_loanTest() {
+}
 
 
     // driver.manage().window().maximize();
