@@ -12,20 +12,20 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import java.util.concurrent.TimeUnit;
-import org.junit.Assert.*;
 import org.testng.Assert;
 
 public  class SwedBankMain extends BasePage {
     
     //WebElement headingSection = driver.findElement(By.id("small-loan-calculator"));
    // WebElement cookiesWindow = driver.findElement(By.class("ui"));
+
+    WebElement swedLogo = driver.findElement(By.xpath("//img[@alt='Swedbank logo']"));
     WebElement acceptCookies = driver.findElement(By.xpath("//button[text()='Nõustun kõigi küpsistega']"));
     WebElement netIncome = driver.findElement(By.xpath("//*[@id='incomeOwner']"));
     WebElement generalTerms = driver.findElement(By.xpath("//p[@class='disclaimer' and text()='kliendiandmete töötlemise põhimõtetele']"));
     WebElement nextButtom = driver.findElement(By.xpath("//*[@id='B_next']"));
-    WebElement logo = driver.findElement(By.xpath("//*[@a='logo']"));
     WebElement articleHeading = driver.findElement(By.xpath("//div[@class='mainform']//h2"));
-    String expectedheading_article = "tekst";
+    String expectedheading_article = "Vajad lisaraha suuremateks ostudeks?";
     
 //WebElement email = driver.findElement(By.xpath("//*[@id='exampleInputEmail1']"));
     /* private final By logout = By.xpath("//button[text()='Täidan taotluse']");
@@ -38,12 +38,11 @@ public  class SwedBankMain extends BasePage {
 
     public void clickAcceptCookies(){
         driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS); 
-        acceptCookies.click();
-        logo.click();      
+        swedLogo.click();
+        acceptCookies.click();      
 	}
 
   	public void headingText(){
-      	//Storing the text of the heading in a string
         String heading = articleHeading.getText();
         Assert.assertEquals(expectedheading_article, articleHeading);
   	}    
@@ -51,7 +50,7 @@ public  class SwedBankMain extends BasePage {
     public void filloutInitialForm(){
       //  password.clear();
       // executor.executeScript("arguments[0].click();",loginBtn);
-        netIncome.sendKeys("2000");
+      //  netIncome.sendKeys("2000");
         generalTerms.click();
         nextButtom.click();
     }

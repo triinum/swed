@@ -12,10 +12,6 @@ import utils.StringDecodeImpl;
 
 public final class SwedbankSmall_loanTest extends BaseTest {
 
-private SwedbankSmall_loanTest() {
-}
-
-
     // driver.manage().window().maximize();
 
   
