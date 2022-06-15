@@ -1,4 +1,4 @@
-package fillout_loanform;
+package regression;
 
 import annotations.CustomFrameworkAnnotations;
 import base.BaseTest;

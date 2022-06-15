@@ -8,7 +8,7 @@
             </run>
         </groups>
         <classes>
-            <class name="fillout_loanform.SwedbankSmall_loanTest"/>
+            <class name="regression.SwedbankSmall_loanTest"/>
         </classes>
     </test>
 </suite>
