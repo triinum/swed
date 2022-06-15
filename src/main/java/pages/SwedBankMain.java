@@ -20,6 +20,7 @@ public  class SwedBankMain extends BasePage {
    // WebElement cookiesWindow = driver.findElement(By.class("ui"));
 
     WebElement swedLogo = driver.findElement(By.xpath("//img[@alt='Swedbank logo']"));
+    WebElement fillout_application_button = driver.findElement(By.xpath("//*[@id="mainForm"]/ui-offer/article/ui-buttonbar/div[1]/button"));
     WebElement acceptCookies = driver.findElement(By.xpath("//button[text()='Nõustun kõigi küpsistega']"));
     WebElement netIncome = driver.findElement(By.xpath("//*[@id='incomeOwner']"));
     WebElement generalTerms = driver.findElement(By.xpath("//p[@class='disclaimer' and text()='kliendiandmete töötlemise põhimõtetele']"));
@@ -45,8 +46,11 @@ public  class SwedBankMain extends BasePage {
   	public void headingText(){
         String heading = articleHeading.getText();
         Assert.assertEquals(expectedheading_article, articleHeading);
-  	}    
-
+  	}   
+      
+    public void moveto_fillout_application_page() {
+    fillout_application_button.click();
+    } 
     public void filloutInitialForm(){
       //  password.clear();
       // executor.executeScript("arguments[0].click();",loginBtn);

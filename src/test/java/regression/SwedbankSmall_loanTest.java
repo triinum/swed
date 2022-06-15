@@ -16,12 +16,12 @@ public final class SwedbankSmall_loanTest extends BaseTest {
 
   
     @CustomFrameworkAnnotations(testCaseType = TestCaseType.FUNCTIONAL, testCaseModule = "Login")
-  //  @Test(testName = "Validate login with invalid credentials", dataProvider = "getUsernameAndPassword", groups = {"regression"})
     @Test(testName = "Navigate to small loan application form", groups = {"fillout_loanform"})
     public void mainPagetoloanPage() {
         SwedBankMain swedBankMain = new SwedBankMain();
-        swedBankMain.clickAcceptCookies();
+     //   swedBankMain.clickAcceptCookies();
         swedBankMain.headingText();
+        swedBankMain.moveto_fillout_application_page();
         swedBankMain.filloutInitialForm();
     }
 }
